@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "player_button_blue01_saisei.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
