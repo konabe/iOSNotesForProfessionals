@@ -22,23 +22,55 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VE4-kg-CBR">
                                 <rect key="frame" x="20" y="153.5" width="138" height="89.5"/>
                             </imageView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJZ-0J-B57">
+                                <rect key="frame" x="20" y="253" width="384" height="100"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="FGO-p5-lbp"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drN-GR-IRH">
+                                <rect key="frame" x="153" y="44" width="108" height="30"/>
+                                <state key="normal" title="スクショを撮る"/>
+                                <connections>
+                                    <action selector="screenshotButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="p51-lM-JtC"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KhN-Qp-x8U">
+                                <rect key="frame" x="188" y="104" width="196" height="119"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="sPo-WZ-Nz0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:3" id="2A3-ZV-jSL"/>
+                            <constraint firstItem="eJZ-0J-B57" firstAttribute="top" secondItem="VE4-kg-CBR" secondAttribute="bottom" constant="10" id="5KQ-5N-1Wo"/>
+                            <constraint firstItem="eJZ-0J-B57" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6kf-6e-Jlm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eJZ-0J-B57" secondAttribute="trailing" constant="10" id="8Te-hY-7BO"/>
                             <constraint firstItem="VE4-kg-CBR" firstAttribute="height" secondItem="sPo-WZ-Nz0" secondAttribute="height" id="JHV-vl-FqV"/>
+                            <constraint firstItem="drN-GR-IRH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pvg-7H-ehJ"/>
+                            <constraint firstItem="eJZ-0J-B57" firstAttribute="top" secondItem="KhN-Qp-x8U" secondAttribute="bottom" constant="30" id="VCS-rG-APp"/>
                             <constraint firstItem="VE4-kg-CBR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ed0-gN-K0j"/>
+                            <constraint firstItem="KhN-Qp-x8U" firstAttribute="leading" secondItem="sPo-WZ-Nz0" secondAttribute="trailing" constant="30" id="jn4-e9-bis"/>
                             <constraint firstItem="VE4-kg-CBR" firstAttribute="top" secondItem="sPo-WZ-Nz0" secondAttribute="bottom" constant="20" id="kdF-Yi-OGI"/>
                             <constraint firstItem="sPo-WZ-Nz0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mkN-KC-BfS"/>
                             <constraint firstItem="sPo-WZ-Nz0" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:10" id="vS6-V8-IVJ"/>
+                            <constraint firstItem="KhN-Qp-x8U" firstAttribute="top" secondItem="drN-GR-IRH" secondAttribute="bottom" constant="30" id="xD8-lU-Ld4"/>
                             <constraint firstItem="sPo-WZ-Nz0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xSA-xQ-AiQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KhN-Qp-x8U" secondAttribute="trailing" constant="30" id="z0r-bM-8yC"/>
                             <constraint firstItem="VE4-kg-CBR" firstAttribute="width" secondItem="sPo-WZ-Nz0" secondAttribute="width" id="zZH-id-OOj"/>
+                            <constraint firstItem="drN-GR-IRH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zw5-WW-ITI"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="gradientImageView" destination="VE4-kg-CBR" id="MlU-pK-am2"/>
                         <outlet property="imageView" destination="sPo-WZ-Nz0" id="lD6-30-H1z"/>
+                        <outlet property="screenshotView" destination="KhN-Qp-x8U" id="iHG-82-P0z"/>
+                        <outlet property="webview" destination="eJZ-0J-B57" id="69b-Cj-X50"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
