@@ -43,6 +43,13 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KhN-Qp-x8U">
                                 <rect key="frame" x="188" y="104" width="196" height="119"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cx7-zn-GjQ">
+                                <rect key="frame" x="20" y="363" width="200" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="DV3-WO-KFV"/>
+                                    <constraint firstAttribute="height" constant="300" id="o57-NU-YbO"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -54,10 +61,12 @@
                             <constraint firstItem="VE4-kg-CBR" firstAttribute="height" secondItem="sPo-WZ-Nz0" secondAttribute="height" id="JHV-vl-FqV"/>
                             <constraint firstItem="drN-GR-IRH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pvg-7H-ehJ"/>
                             <constraint firstItem="eJZ-0J-B57" firstAttribute="top" secondItem="KhN-Qp-x8U" secondAttribute="bottom" constant="30" id="VCS-rG-APp"/>
+                            <constraint firstItem="cx7-zn-GjQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WcV-bL-6pQ"/>
                             <constraint firstItem="VE4-kg-CBR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ed0-gN-K0j"/>
                             <constraint firstItem="KhN-Qp-x8U" firstAttribute="leading" secondItem="sPo-WZ-Nz0" secondAttribute="trailing" constant="30" id="jn4-e9-bis"/>
                             <constraint firstItem="VE4-kg-CBR" firstAttribute="top" secondItem="sPo-WZ-Nz0" secondAttribute="bottom" constant="20" id="kdF-Yi-OGI"/>
                             <constraint firstItem="sPo-WZ-Nz0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mkN-KC-BfS"/>
+                            <constraint firstItem="cx7-zn-GjQ" firstAttribute="top" secondItem="eJZ-0J-B57" secondAttribute="bottom" constant="10" id="tyd-S0-oYu"/>
                             <constraint firstItem="sPo-WZ-Nz0" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:10" id="vS6-V8-IVJ"/>
                             <constraint firstItem="KhN-Qp-x8U" firstAttribute="top" secondItem="drN-GR-IRH" secondAttribute="bottom" constant="30" id="xD8-lU-Ld4"/>
                             <constraint firstItem="sPo-WZ-Nz0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xSA-xQ-AiQ"/>
@@ -70,6 +79,7 @@
                         <outlet property="gradientImageView" destination="VE4-kg-CBR" id="MlU-pK-am2"/>
                         <outlet property="imageView" destination="sPo-WZ-Nz0" id="lD6-30-H1z"/>
                         <outlet property="screenshotView" destination="KhN-Qp-x8U" id="iHG-82-P0z"/>
+                        <outlet property="tintImageView" destination="cx7-zn-GjQ" id="nmw-xo-lT8"/>
                         <outlet property="webview" destination="eJZ-0J-B57" id="69b-Cj-X50"/>
                     </connections>
                 </viewController>

@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var gradientImageView: UIImageView!
     @IBOutlet weak var webview: WKWebView!
     @IBOutlet weak var screenshotView: UIImageView!
+    @IBOutlet weak var tintImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,7 @@ class ViewController: UIViewController {
         // named:は画像データをメモリにキャッシュする。メモリの問題になることがある。
         let ofuroImage = UIImage(named: "ofuro_onsen_young_man")
         // こっちでやればキャッシュせずにすむ。
+        // § 8.8 Creating and Initializing Image Objects with file contents
         _ = UIImage(contentsOfFile: Bundle.main.path(forResource: "ofuro_onsen_young_man", ofType: "png")!)
         
         // Base64の画像データも表示できる。
@@ -62,6 +64,7 @@ class ViewController: UIViewController {
         }
         
         // §8.3 Gradient Image with Colors
+        // § 8.10 Gradient Background Layer for Bounds
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = gradientImageView.bounds
         gradientLayer.colors = [UIColor.purple.cgColor, UIColor.blue.cgColor]
@@ -87,7 +90,36 @@ class ViewController: UIViewController {
         gradientImageView.image = decodedImage
         
         // §8.5 Take a Snapshot of a UIView
-        webview.load(URLRequest(url: URL(string: "https://www.apple.com/")!))
+        webview.load(URLRequest(url: URL(string: "https://www.google.com/")!))
+
+        // §8.6 Change UIImage Color
+        let maskImage = ofuroImage!.cgImage
+        let width = ofuroImage!.size.width
+        let height = ofuroImage!.size.height
+        let bounds = CGRect(x: 0, y: 0, width: width, height: height)
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedLast.rawValue)
+        let bitmapContext = CGContext(data: nil, width: Int(width), height: Int(height), bitsPerComponent: 8, bytesPerRow: 0, space: colorSpace, bitmapInfo: bitmapInfo.rawValue)
+        
+        bitmapContext!.clip(to: bounds, mask: maskImage!)
+        bitmapContext!.setFillColor(UIColor.blue.cgColor)
+        bitmapContext!.setAlpha(0.2)
+        bitmapContext!.fill(bounds)
+        
+        if let cImage = bitmapContext!.makeImage() {
+            let coloredImage = UIImage(cgImage: cImage)
+            gradientImageView.image = coloredImage
+        }
+        
+        // § 8.7 Apply UIColor to UIImage
+        let ofuroImage2 = UIImage(named: "ofuro_onsen_young_man")?.withRenderingMode(.alwaysTemplate)
+        tintImageView.image = ofuroImage2
+        tintImageView.tintColor = .purple.withAlphaComponent(0.2)
+        
+        // § 8.9 Resizable image with caps
+        // 何が起こっているか調査したほうがいい
+        ofuroImage2?.resizableImage(withCapInsets: UIEdgeInsets(top: 100, left: 0, bottom: 100, right: 0), resizingMode: .stretch)
+        tintImageView.image = ofuroImage2
         
     }
     
