@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Chapter11_UIImageView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sea" translatesAutoresizingMaskIntoConstraints="NO" id="w7k-3V-cO4">
+                                <rect key="frame" x="20" y="64" width="150.5" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="w7k-3V-cO4" secondAttribute="height" multiplier="275:183" id="bRR-jL-Lvo"/>
+                                    <constraint firstAttribute="height" constant="100" id="fjP-i5-1dV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nK7-pu-N8s">
+                                <rect key="frame" x="39" y="74" width="112" height="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="schloss" translatesAutoresizingMaskIntoConstraints="NO" id="0iU-rU-pTd">
+                                <rect key="frame" x="20" y="174" width="134" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="DNj-7p-eAP"/>
+                                    <constraint firstAttribute="width" secondItem="0iU-rU-pTd" secondAttribute="height" multiplier="59:44" id="TYM-JB-huW"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="w7k-3V-cO4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="H8K-Xv-fld"/>
+                            <constraint firstItem="nK7-pu-N8s" firstAttribute="centerY" secondItem="w7k-3V-cO4" secondAttribute="centerY" id="Lzr-7Q-rLA"/>
+                            <constraint firstItem="nK7-pu-N8s" firstAttribute="top" secondItem="w7k-3V-cO4" secondAttribute="top" constant="10" id="VR7-4X-Luj"/>
+                            <constraint firstItem="w7k-3V-cO4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="hEo-I0-LEf"/>
+                            <constraint firstItem="0iU-rU-pTd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hfz-Ec-TK0"/>
+                            <constraint firstItem="nK7-pu-N8s" firstAttribute="centerX" secondItem="w7k-3V-cO4" secondAttribute="centerX" id="pMJ-g6-jJs"/>
+                            <constraint firstItem="0iU-rU-pTd" firstAttribute="top" secondItem="w7k-3V-cO4" secondAttribute="bottom" constant="10" id="yCa-zm-xcq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="w7k-3V-cO4" id="CHo-FP-cX3"/>
+                        <outlet property="maskLabel" destination="nK7-pu-N8s" id="69p-SX-kfU"/>
+                        <outlet property="schlossImageView" destination="0iU-rU-pTd" id="y2A-OX-qQ2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="97" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="schloss" width="5979" height="4468"/>
+        <image name="sea" width="275" height="183"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
