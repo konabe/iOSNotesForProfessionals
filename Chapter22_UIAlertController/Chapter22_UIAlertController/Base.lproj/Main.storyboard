@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Chapter22_UIAlertController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjh-cN-G7E">
+                                <rect key="frame" x="20" y="44" width="117" height="30"/>
+                                <state key="normal" title="Simple AlertView"/>
+                                <connections>
+                                    <action selector="simpleAlertViewTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4AP-hb-vQ8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6RC-Sf-ePC">
+                                <rect key="frame" x="20" y="84" width="149" height="30"/>
+                                <state key="normal" title="Destructive AlertView"/>
+                                <connections>
+                                    <action selector="destructiveAlertViewTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rql-sk-3oA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clj-Zj-JzU">
+                                <rect key="frame" x="20" y="124" width="95" height="30"/>
+                                <state key="normal" title="Action Sheets"/>
+                                <connections>
+                                    <action selector="actionSheetsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mdm-WZ-QyJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="177-TD-ovc">
+                                <rect key="frame" x="20" y="162" width="62" height="30"/>
+                                <state key="normal" title="TextField"/>
+                                <connections>
+                                    <action selector="textFieldTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uGh-Rl-izA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="clj-Zj-JzU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0RJ-OJ-SES"/>
+                            <constraint firstItem="clj-Zj-JzU" firstAttribute="top" secondItem="6RC-Sf-ePC" secondAttribute="bottom" constant="10" id="1AR-jy-97J"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="gjh-cN-G7E" secondAttribute="trailing" constant="277" id="3pi-yQ-qGd"/>
+                            <constraint firstItem="177-TD-ovc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="D9S-lH-ImJ"/>
+                            <constraint firstItem="gjh-cN-G7E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="FKb-rF-mBh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="6RC-Sf-ePC" secondAttribute="trailing" constant="245" id="HnP-au-j5Q"/>
+                            <constraint firstItem="gjh-cN-G7E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LpT-xS-QM4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="clj-Zj-JzU" secondAttribute="trailing" constant="348" id="MiT-dJ-mRs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="177-TD-ovc" secondAttribute="trailing" constant="332" id="W6u-oq-F4B"/>
+                            <constraint firstItem="6RC-Sf-ePC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZeU-IB-uPZ"/>
+                            <constraint firstItem="177-TD-ovc" firstAttribute="top" secondItem="clj-Zj-JzU" secondAttribute="bottom" constant="8" symbolic="YES" id="bOb-TY-Gbk"/>
+                            <constraint firstItem="6RC-Sf-ePC" firstAttribute="top" secondItem="gjh-cN-G7E" secondAttribute="bottom" constant="10" id="jXC-Yl-8uU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actionSheetsButton" destination="clj-Zj-JzU" id="26D-kU-WpC"/>
+                        <outlet property="destructiveAlertViewButton" destination="6RC-Sf-ePC" id="VVL-kG-2z0"/>
+                        <outlet property="simpleAlertViewButton" destination="gjh-cN-G7E" id="QhJ-4X-oqS"/>
+                        <outlet property="textFieldButton" destination="177-TD-ovc" id="nCw-vB-v1L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
