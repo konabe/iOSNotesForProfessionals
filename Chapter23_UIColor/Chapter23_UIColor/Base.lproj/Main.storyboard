@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Chapter23_UIColor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5x-4h-e0p">
+                                <rect key="frame" x="87" y="81" width="240" height="89.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RhU-np-7NC">
+                                <rect key="frame" x="87" y="207" width="240" height="89.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l6G-Ke-Jar">
+                                <rect key="frame" x="87" y="345.5" width="240" height="90"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RhU-np-7NC" firstAttribute="top" secondItem="r5x-4h-e0p" secondAttribute="bottom" constant="36.5" id="2TZ-cg-1zT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RhU-np-7NC" secondAttribute="trailing" constant="87" id="8lQ-h3-9pd"/>
+                            <constraint firstItem="RhU-np-7NC" firstAttribute="height" secondItem="r5x-4h-e0p" secondAttribute="height" id="Fmc-0V-I8s"/>
+                            <constraint firstItem="r5x-4h-e0p" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:10" id="JeC-R1-i9P"/>
+                            <constraint firstItem="l6G-Ke-Jar" firstAttribute="top" secondItem="RhU-np-7NC" secondAttribute="bottom" constant="49" id="LFC-S8-RMU"/>
+                            <constraint firstItem="r5x-4h-e0p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="Mnf-uR-mbi"/>
+                            <constraint firstItem="RhU-np-7NC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="S8r-JY-Exr"/>
+                            <constraint firstItem="l6G-Ke-Jar" firstAttribute="height" secondItem="RhU-np-7NC" secondAttribute="height" id="Sji-VE-Y88"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r5x-4h-e0p" secondAttribute="trailing" constant="87" id="TMO-kW-JJJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l6G-Ke-Jar" secondAttribute="trailing" constant="87" id="Y5D-8l-Wug"/>
+                            <constraint firstItem="r5x-4h-e0p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="37" id="aLt-il-bJu"/>
+                            <constraint firstItem="l6G-Ke-Jar" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="txW-yT-jR7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="darkerView" destination="l6G-Ke-Jar" id="RAR-R2-omS"/>
+                        <outlet property="lighterView" destination="RhU-np-7NC" id="gOg-TG-q8q"/>
+                        <outlet property="patternImageView" destination="r5x-4h-e0p" id="iIH-jv-X4E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101" y="136"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
