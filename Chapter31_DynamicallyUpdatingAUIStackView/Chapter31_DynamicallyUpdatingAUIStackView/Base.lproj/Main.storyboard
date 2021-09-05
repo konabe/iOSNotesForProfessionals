@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Chapter31_DynamicallyUpdatingAUIStackView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="r7B-SQ-WLN">
+                                <rect key="frame" x="107" y="-224" width="200" height="1344"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aka" translatesAutoresizingMaskIntoConstraints="NO" id="LXd-3I-dwb">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="676"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ao" translatesAutoresizingMaskIntoConstraints="NO" id="lZS-CR-xkj">
+                                        <rect key="frame" x="0.0" y="676" width="200" height="668"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="6wE-Ld-Rzv"/>
+                                </constraints>
+                            </stackView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7cG-cM-MJc">
+                                <rect key="frame" x="20" y="432.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="axisChangeWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="9hH-2X-EGf"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7cG-cM-MJc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4oj-ET-ohG"/>
+                            <constraint firstItem="r7B-SQ-WLN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IA4-Aq-HGx"/>
+                            <constraint firstItem="r7B-SQ-WLN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qlg-kR-8Ph"/>
+                            <constraint firstItem="7cG-cM-MJc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hvg-pL-jbc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="axisSwitch" destination="7cG-cM-MJc" id="9NK-Yv-Kcv"/>
+                        <outlet property="stackView" destination="r7B-SQ-WLN" id="Ggn-hI-Yem"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="aka" width="771" height="676"/>
+        <image name="ao" width="800" height="668"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
