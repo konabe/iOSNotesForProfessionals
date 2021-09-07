@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Chapter32_UIScrollViewWithStackViewChild
 //
-//  Created by 小鍋涼太 on 2021/09/05.
+//  Created by 小鍋涼太 on 2021/09/07.
 //
 
 import UIKit
