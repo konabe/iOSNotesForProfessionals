@@ -5,4 +5,6 @@ iOSNotesForProfessionals
 - Chapter19はおそらくミスしているのでパス。
 - Chapter33はスクロールしたい側のHeightの制約のPriorityを下げるといいよという話
 - Chapter48はChapter44のObjective-C版なだけかも。
-
+- Chapter65はReachablityについてだが、古すぎるのでパス
+  - NWPathMonitorのほうがいいらしい
+- 
