@@ -7,4 +7,4 @@ iOSNotesForProfessionals
 - Chapter48はChapter44のObjective-C版なだけかも。
 - Chapter65はReachablityについてだが、古すぎるのでパス
   - NWPathMonitorのほうがいいらしい
-- 
+- Chapter71はObjective-Cでのやり方なのでパス
