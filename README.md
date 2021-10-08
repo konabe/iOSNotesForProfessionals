@@ -9,3 +9,4 @@ iOSNotesForProfessionals
   - NWPathMonitorのほうがいいらしい
 - Chapter71はObjective-Cでのやり方なのでパス
 - Chapter78はDeprecatedなのでパス NSURLConnection
+- Chapter81:NSInvocationはObjective-C限定
