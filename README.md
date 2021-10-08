@@ -8,3 +8,4 @@ iOSNotesForProfessionals
 - Chapter65はReachablityについてだが、古すぎるのでパス
   - NWPathMonitorのほうがいいらしい
 - Chapter71はObjective-Cでのやり方なのでパス
+- Chapter78はDeprecatedなのでパス NSURLConnection
