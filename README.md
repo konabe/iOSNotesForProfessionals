@@ -13,3 +13,9 @@ iOSNotesForProfessionals
 - Chapter90:XAMPPで開発するデモなのでパス
 - Chapter96:iBeaconはなかなか触る機会がなさそうなのでパス
 - Chapter99:UniversalLinksは資料が古いので、あとで勉強してみる。
+- Chapter101:情報が古いのでStoreKitは後で勉強してみる。
+- Chapter102:うまく行かないのでパス
+- Chapter104:FacebookSDKあとでやる。
+- Chapter105:AFNetworkingはObjective-C用らしいので。
+- Chapter106:CallKitはSimulatorじゃ試せないらしいので
+- 
